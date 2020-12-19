@@ -1,0 +1,6 @@
+[submodule "apps/StreamCalendarBackEndMock"]
+	path = apps/StreamCalendarBackEndMock
+	url = git@github.com:NaGeL182/StreamCalendarBackEndMock.git
+[submodule "apps/StreamCalendarFrontEnd"]
+	path = apps/StreamCalendarFrontEnd
+	url = git@github.com:NaGeL182/StreamCalendarFrontEnd.git

@@ -1,0 +1,26 @@
+version: "3.9"
+services:
+  backend-mock:
+    build: 
+      context: .
+      dockerfile: dockers/StreamCalendarBackEndMock/dockerfile
+    ports:
+      - "4000:4000"
+    volumes:
+      - type: bind
+        source: ./apps/StreamCalendarBackEndMock
+        target: /workspace
+
+  frontend:
+    build: 
+      context: .
+      dockerfile: dockers/StreamCalendarFrontEnd/dockerfile
+    ports:
+      - "3000:3000"
+    volumes:
+      - type: bind
+        source: ./apps/StreamCalendarFrontEnd
+        target: /workspace
+    environment: 
+      NUXT_HOST: "0.0.0.0" #needed so nuxt can server outside the container
+
